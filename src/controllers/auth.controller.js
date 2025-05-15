@@ -22,3 +22,14 @@ export async function refresh(req, res) {
         res.status(403).json({message: error.message || 'falha ao renovar token'})
     }
 }
+
+export async function signup (req, res){
+    try {
+        const user = authService.createUser(
+            email:"abcd@g",
+            password:"senha123",
+            role:'user',
+
+        )
+    }
+}

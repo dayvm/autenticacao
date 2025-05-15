@@ -51,3 +51,17 @@ export async function refreshToken (oldRefreshToken) {
         
     }
 }
+
+//simula um banco de usuários
+const users = [];
+
+//simula a criação de um usuário no banco
+export async function createUser(user) {
+  users.push(user);
+  return user
+}
+
+//simula o select/find de um usuário por email
+export async function findUserByEmail(email) {
+  return users.find(u=>u.email===email)
+}
